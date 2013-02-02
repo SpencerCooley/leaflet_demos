@@ -1,8 +1,11 @@
 $(document).ready(function(){
   
 	
-	var conjunctured = [30.264466, -97.728465]
-	
+	var conjunctured = [30.264466, -97.728465];
+	var pizzaPlace = [30.249238, -97.749576];
+	var anotherRandomPoint = [30.260550, -97.748880];
+
+
 	var mapBoxLayers = L.tileLayer('http://a.tiles.mapbox.com/v3/spencercooley.map-kqxiouyq/{z}/{x}/{y}.png', {
 	    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
 	    maxZoom: 18
@@ -15,51 +18,63 @@ $(document).ready(function(){
 	var map = L.map('the_map', {
 		center: conjunctured, 
 		layers: mapBoxLayers,
-		zoom: 15,
+		zoom: 14,
 	    maxZoom: 18
 	});
 
 
 
-
-
-
-
-
-	// //creates a marker and then places it on the map
-	// var marker = new L.Marker(conjunctured);
-
-	// marker.addTo(map)
-
-
-
-
-
-
-	//makes an icon
-	var icon = L.icon({
-		iconUrl: 'https://si0.twimg.com/profile_images/291512953/conjunctured_dot_bigger.png',
-		iconSize: [73, 73]
-	});
-
 	
+	// //polyline
+	// var directLineToFood = [conjunctured, pizzaPlace] 
 
-	//marker with some options
-	var marker = new L.Marker(conjunctured, {
-		icon: icon,
-		draggable: true
-	});
+	// var polyline = new L.polyline(directLineToFood);
 
-	//binds a popup window with some content to the marker
-	var theContent = '<h1><a href="http://twitter.com/spencercooley">@spencercooley</a></h1><h3>Is talking about maps right now at <a href="http://twitter.com/conjunctured">@conjunctured</a>.</h3>';
-
-	marker.bindPopup(theContent).openPopup();
-
-	marker.addTo(map)
+	// polyline.addTo(map)
 
 
 
 
+
+
+	// //3 point line	
+	// var threePolyline = new L.polyline([conjunctured, pizzaPlace, anotherRandomPoint]);
+
+	// map.addLayer(threePolyline)
+
+
+
+
+
+
+
+	// //polygon
+
+	// var polygon = new L.Polygon([conjunctured, pizzaPlace, anotherRandomPoint]);
+
+	// map.addLayer(polygon)
+
+
+
+
+
+
+
+	// //rectangle
+	// var bounds = [conjunctured, pizzaPlace];
+
+	// var rectangle = L.rectangle(bounds);
+
+	// rectangle.addTo(map)
+
+
+
+
+
+	//circle with a 400m radius around conjunctured
+	var circle = new L.circle(conjunctured, 400);
+
+	circle.addTo(map)
 
 
 
