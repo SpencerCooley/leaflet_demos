@@ -25,39 +25,39 @@ $(document).ready(function(){
 
 
 
-	// simple marker
-	//creates a marker and then places it on the map
-	var marker = new L.Marker(conjunctured);
+	// // simple marker
+	// //creates a marker and then places it on the map
+	// var marker = new L.Marker(conjunctured);
 
-	marker.addTo(map)
-
-
+	// marker.addTo(map)
 
 
 
 
-	// // // marker with some options and features
 
-	// //makes an icon
-	// var icon = L.icon({
-	// 	iconUrl: 'https://si0.twimg.com/profile_images/291512953/conjunctured_dot_bigger.png',
-	// 	iconSize: [73, 73]
-	// });
+
+	// // marker with some options and features
+
+	//makes an icon
+	var icon = L.icon({
+		iconUrl: 'https://si0.twimg.com/profile_images/291512953/conjunctured_dot_bigger.png',
+		iconSize: [73, 73]
+	});
 
 	
 
-	// //marker with some options
-	// var marker = new L.Marker(conjunctured, {
-	// 	icon: icon,
-	// 	draggable: true
-	// });
+	//marker with some options
+	var marker = new L.Marker(conjunctured, {
+		icon: icon,
+		draggable: true
+	});
 
-	// //binds a popup window with some content to the marker
-	// var theContent = '<h1><a href="http://twitter.com/spencercooley">@spencercooley</a></h1><h3>Is talking about maps right now at <a href="http://twitter.com/conjunctured">@conjunctured</a>.</h3>';
+	//binds a popup window with some content to the marker
+	var theContent = '<h1><a href="http://twitter.com/spencercooley">@spencercooley</a></h1><h3>Is talking about maps right now at <a href="http://twitter.com/conjunctured">@conjunctured</a>.</h3>';
 
-	// marker.bindPopup(theContent).openPopup();
+	marker.bindPopup(theContent).openPopup();
 
-	// marker.addTo(map)
+	marker.addTo(map)
 
 
 

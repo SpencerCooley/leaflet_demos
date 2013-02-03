@@ -37,10 +37,10 @@ $(document).ready(function(){
 
 
 
-	// //3 point line	
-	// var threePolyline = new L.polyline([conjunctured, pizzaPlace, anotherRandomPoint]);
+	//3 point line	
+	var threePolyline = new L.polyline([conjunctured, pizzaPlace, anotherRandomPoint]);
 
-	// map.addLayer(threePolyline)
+	map.addLayer(threePolyline)
 
 
 
@@ -71,10 +71,10 @@ $(document).ready(function(){
 
 
 
-	//circle with a 400m radius around conjunctured
-	var circle = new L.circle(conjunctured, 400);
+	// //circle with a 400m radius around conjunctured
+	// var circle = new L.circle(conjunctured, 400);
 
-	circle.addTo(map)
+	// circle.addTo(map)
 
 
 
