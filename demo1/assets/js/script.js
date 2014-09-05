@@ -9,6 +9,9 @@ $(document).ready(function(){
 	});
 
 
+  
+  
+  
 	var map = L.map('the_map', {
 		center: conjunctured, 
 		layers: mapBoxLayers,
